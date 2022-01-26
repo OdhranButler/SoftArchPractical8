@@ -8,9 +8,10 @@
 START:                  ; first instruction of program
 
 * Put program code here
-
+    
+    MOVE #100, $10
     LEA health, A2  ;Loads health into A2
-    MOVE A2, D1     ;Loads A2 into D1
+    MOVE (A2), D1     ;Loads A2 into D1
     ADD #5, D1      ;Adds 5 to D1    
     SUB #5, D1      ;Subtracts 5 from d1
     MULU #2, D1     ;Multiplies D1 by 2
@@ -25,6 +26,7 @@ START:                  ; first instruction of program
 health dc.b $10
 
     END    START        ; last line of source
+
 
 *~Font name~Courier New~
 *~Font size~10~
